@@ -25,11 +25,11 @@ Mpeg1Muxer = function(options) {
     "tcp",
     "-thread_queue_size",
     "512",
-    "-r",
-    "30",
     "-i",
     this.url,
     '-f',
+    'mpegts',
+    '-codec:v',
     'mpeg1video',
     // additional ffmpeg options go here
     ...this.additionalFlags,

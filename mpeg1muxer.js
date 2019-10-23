@@ -21,6 +21,12 @@ Mpeg1Muxer = function(options) {
     }
   }
   this.spawnOptions = [
+    "-rtsp_transport", 
+    "tcp",
+    "-thread_queue_size",
+    "512",
+    "-r",
+    "30",
     "-i",
     this.url,
     '-f',
